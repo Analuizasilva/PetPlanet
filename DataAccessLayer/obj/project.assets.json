@@ -1508,14 +1508,14 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "DataLayer/1.0.0": {
+      "Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "compile": {
-          "bin/placeholder/DataLayer.dll": {}
+          "bin/placeholder/Data.dll": {}
         },
         "runtime": {
-          "bin/placeholder/DataLayer.dll": {}
+          "bin/placeholder/Data.dll": {}
         }
       }
     }
@@ -5762,15 +5762,15 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "DataLayer/1.0.0": {
+    "Data/1.0.0": {
       "type": "project",
-      "path": "../DataLayer/DataLayer.csproj",
-      "msbuildProject": "../DataLayer/DataLayer.csproj"
+      "path": "../DataLayer/Data.csproj",
+      "msbuildProject": "../DataLayer/Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "DataLayer >= 1.0.0",
+      "Data >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.3",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.3",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.3"
@@ -5783,9 +5783,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User01\\source\\repos\\PetPlanet\\DataAccessLayer\\DataAccessLayer.csproj",
-      "projectName": "DataAccessLayer",
-      "projectPath": "C:\\Users\\User01\\source\\repos\\PetPlanet\\DataAccessLayer\\DataAccessLayer.csproj",
+      "projectUniqueName": "C:\\Users\\User01\\source\\repos\\PetPlanet\\DataAccessLayer\\DataAccess.csproj",
+      "projectName": "DataAccess",
+      "projectPath": "C:\\Users\\User01\\source\\repos\\PetPlanet\\DataAccessLayer\\DataAccess.csproj",
       "packagesPath": "C:\\Users\\User01\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\User01\\source\\repos\\PetPlanet\\DataAccessLayer\\obj\\",
       "projectStyle": "PackageReference",
@@ -5808,8 +5808,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\User01\\source\\repos\\PetPlanet\\DataLayer\\DataLayer.csproj": {
-              "projectPath": "C:\\Users\\User01\\source\\repos\\PetPlanet\\DataLayer\\DataLayer.csproj"
+            "C:\\Users\\User01\\source\\repos\\PetPlanet\\DataLayer\\Data.csproj": {
+              "projectPath": "C:\\Users\\User01\\source\\repos\\PetPlanet\\DataLayer\\Data.csproj"
             }
           }
         }

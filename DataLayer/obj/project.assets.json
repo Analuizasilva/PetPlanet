@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User01\\source\\repos\\PetPlanet\\DataLayer\\DataLayer.csproj",
-      "projectName": "DataLayer",
-      "projectPath": "C:\\Users\\User01\\source\\repos\\PetPlanet\\DataLayer\\DataLayer.csproj",
+      "projectUniqueName": "C:\\Users\\User01\\source\\repos\\PetPlanet\\DataLayer\\Data.csproj",
+      "projectName": "Data",
+      "projectPath": "C:\\Users\\User01\\source\\repos\\PetPlanet\\DataLayer\\Data.csproj",
       "packagesPath": "C:\\Users\\User01\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\User01\\source\\repos\\PetPlanet\\DataLayer\\obj\\",
       "projectStyle": "PackageReference",
