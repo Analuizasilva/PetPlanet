@@ -16,8 +16,13 @@ namespace DataLayer
 
         #region Relationship
         public virtual ICollection<Pet> Pets { get; set; }
+
         #endregion
 
+        public Client()
+        {
+
+        }
         public Client(Guid id, DateTime createdAt, DateTime updatedAt, string name, int phoneNumber, string identification) : base(id, createdAt, updatedAt, name)
         {
             PhoneNumber = phoneNumber;

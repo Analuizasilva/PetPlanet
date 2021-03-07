@@ -28,5 +28,9 @@ namespace DataLayer
             PhoneNumber = phoneNumber;
             TaxNumber = taxNumber;
         }
+
+        public Store()
+        {
+        }
     }
 }

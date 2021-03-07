@@ -24,5 +24,9 @@ namespace DataLayer
             PetId = petId;
             EmployeeId = employeeId;
         }
+
+        public Service()
+        {
+        }
     }
 }

@@ -21,5 +21,9 @@ namespace DataLayer
             Genre = genre;
             ClientId = clientId;
         }
+
+        public Pet()
+        {
+        }
     }
 }

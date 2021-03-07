@@ -19,7 +19,7 @@ namespace DataLayer.Base
         {
             Id = Guid.NewGuid();
             DateUpdated = DateTime.UtcNow;
-            DateCreated = DateCreated;
+            DateCreated = DateTime.UtcNow;
         }
 
         protected Entity(Guid id, DateTime createdAt, DateTime updatedAd)

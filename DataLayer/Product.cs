@@ -21,5 +21,9 @@ namespace DataLayer
             Price = price;
             ServiceId = serviceId;
         }
+
+        public Product()
+        {
+        }
     }
 }

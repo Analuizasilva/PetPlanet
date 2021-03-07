@@ -29,5 +29,9 @@ namespace DataLayer
             TaxNumber = taxNumber;
             StoreId = storeId;
         }
+
+        public Employee()
+        {
+        }
     }
 }
