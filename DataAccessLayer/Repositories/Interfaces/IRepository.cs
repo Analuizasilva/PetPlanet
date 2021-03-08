@@ -6,7 +6,7 @@ using DataLayer.Base;
 
 namespace DataAccessLayer.Repositories.Interfaces
 {
-    public interface IRepository<TEntity> : IDisposable where TEntity : Entity
+    public interface IRepository<TEntity> 
     {
         Task Add(TEntity entity);
         Task<TEntity> GetById(Guid id);

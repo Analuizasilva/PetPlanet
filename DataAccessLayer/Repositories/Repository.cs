@@ -61,9 +61,5 @@ namespace DataAccessLayer.Repositories
             db.Update(entity);
             await SaveChanges();
         }
-        public void Dispose()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
