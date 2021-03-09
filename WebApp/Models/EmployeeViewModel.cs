@@ -20,16 +20,19 @@ namespace WebApp.Models
         [ForeignKey("Store")]
         public Guid StoreId { get; set; }
 
-        public static EmployeeViewModel Parse(Employee employeeduct)
+        public static EmployeeViewModel Parse(Employee employee)
         {
             return new EmployeeViewModel()
             {
-                DateCreated = employeeduct.DateCreated,
-                DateUpdated = employeeduct.DateUpdated,
-                Position = employeeduct.Position,
-                Identification = employeeduct.Identification,
-                TaxNumber = employeeduct.TaxNumber,
-                StoreId = employeeduct.StoreId,
+                DateCreated = employee.DateCreated,
+                DateUpdated = employee.DateUpdated,
+                Position = employee.Position,
+                Identification = employee.Identification,
+                TaxNumber = employee.TaxNumber,
+                StoreId = employee.StoreId,
+                Name = employee.Name,
+                Id = employee.Id
+
             };
         }
 
@@ -46,6 +49,8 @@ namespace WebApp.Models
             Identification = model.Identification;
             TaxNumber = model.TaxNumber;
             StoreId = model.StoreId;
+            Name = model.Name;
+            Id = model.Id;            
             return model;
         }
 
@@ -56,6 +61,8 @@ namespace WebApp.Models
                                  Position == model.Position &&
                                  Identification == model.Identification &&
                                  TaxNumber == model.TaxNumber &&
+                                  Name == model.Name &&
+                                  Id == model.Id &&
                                  StoreId == model.StoreId;
         }
     }

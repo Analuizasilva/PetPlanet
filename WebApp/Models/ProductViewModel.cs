@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Xml.Linq;
 using Data;
 using WebApp.Models.Base;
 
@@ -22,6 +23,8 @@ namespace WebApp.Models
                 DateUpdated = product.DateUpdated,
                 Price = product.Price,
                 ServiceId = product.ServiceId,
+                Name = product.Name,
+                Id = product.Id,
             };
         }
 
@@ -36,6 +39,8 @@ namespace WebApp.Models
             DateUpdated = model.DateUpdated;
             Price = model.Price;
             ServiceId = model.ServiceId;
+            Name = model.Name;
+            Id = model.Id;
             return model;
         }
 
@@ -44,7 +49,9 @@ namespace WebApp.Models
             return DateCreated == model.DateCreated &&
                      DateUpdated == model.DateUpdated &&
                                  Price == model.Price &&
-                                 ServiceId == model.ServiceId;
+                                 ServiceId == model.ServiceId &&
+                                 Name == model.Name &&
+                                 Id == model.Id;
         }
     }
 }

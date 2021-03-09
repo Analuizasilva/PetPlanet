@@ -8,7 +8,7 @@ namespace DataAccessLayer.Context
         public PetPlanetContext(DbContextOptions<PetPlanetContext> options) : base(options)
         {
         }
-        public DbSet<Pet> Clients { get; set; }
+        public DbSet<Client> Clients { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Pet> Pets { get; set; }
         public DbSet<Product> Products { get; set; }

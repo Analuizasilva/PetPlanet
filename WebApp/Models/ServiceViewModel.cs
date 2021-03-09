@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Xml.Linq;
 using Data;
 using WebApp.Models.Base;
 
@@ -24,8 +25,9 @@ namespace WebApp.Models
                 DateUpdated = service.DateUpdated,
                 PetId = service.PetId,
                 Products = service.Products,
-                EmployeeId = service.EmployeeId,                
-            };
+                EmployeeId = service.EmployeeId,
+                Id = service.Id
+        };
         }
 
         public Service ToModel()
@@ -39,7 +41,8 @@ namespace WebApp.Models
             DateUpdated = model.DateUpdated;
             Products = model.Products;
             PetId = model.PetId;
-            EmployeeId = model.EmployeeId;
+            EmployeeId = model.EmployeeId;            
+            Id = model.Id;
             return model;
         }
 
@@ -48,7 +51,8 @@ namespace WebApp.Models
             return DateCreated == model.DateCreated &&
                      DateUpdated == model.DateUpdated &&
                      Products == model.Products &&
-                                 PetId == model.PetId &&
+                                 PetId == model.PetId &&                                
+                                 Id == model.Id &&
                                  EmployeeId == model.EmployeeId;
         }
     }

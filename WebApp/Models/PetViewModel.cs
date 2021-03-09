@@ -24,7 +24,9 @@ namespace WebApp.Models
                 Color = pet.Color,
                 Genre = pet.Genre,
                 Products = pet.Products,
-                ClientId = pet.ClientId
+                ClientId = pet.ClientId,
+                Name = pet.Name,
+                Id = pet.Id,
             };
         }
 
@@ -41,6 +43,8 @@ namespace WebApp.Models
             Genre = model.Genre;
             Products = model.Products;
             ClientId = model.ClientId;
+            Name = model.Name;
+            Id = model.Id;
             return model;
         }
 
@@ -48,10 +52,12 @@ namespace WebApp.Models
         {
             return DateCreated == model.DateCreated &&
                      DateUpdated == model.DateUpdated &&
-                                 Color == model.Color &&
-                                 Genre == model.Genre &&
-                                  Products == model.Products &&
-                                  ClientId == model.ClientId;
+                                Color == model.Color &&
+                                Genre == model.Genre &&
+                                Products == model.Products &&
+                                Name == model.Name &&
+                                Id == model.Id &&
+                                ClientId == model.ClientId;
         }
     }
 }

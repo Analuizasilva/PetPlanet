@@ -12,7 +12,7 @@ namespace Data
         #region Relationship
         public virtual ICollection<Product> Products { get; set; }
         public Guid ClientId { get; set; }
-        public Pet Client { get; set; }
+        public Client Client { get; set; }
         #endregion
 
         public Pet(Guid id, DateTime dateCreated, DateTime dateUpted, string name, string color, string genre, Guid clientId) : base(id, dateCreated, dateUpted, name)

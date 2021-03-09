@@ -25,8 +25,9 @@ namespace WebApp.Models
                 DateUpdated = client.DateUpdated,
                 PhoneNumber = client.PhoneNumber,
                 Identification = client.Identification,
-                Pets = client.Pets
-
+                Pets = client.Pets,
+                Id = client.Id,
+                Name = client.Name
             };
         }
 
@@ -42,6 +43,8 @@ namespace WebApp.Models
             PhoneNumber = model.PhoneNumber;
             Identification = model.Identification;
             Pets = model.Pets;
+            Id = model.Id;
+            Name = model.Name;
             return model;
         }
 
@@ -51,7 +54,9 @@ namespace WebApp.Models
                      DateUpdated == model.DateUpdated &&
                                  PhoneNumber == model.PhoneNumber &&
                                  Identification == model.Identification &&
-                                  Pets == model.Pets;
+                                  Pets == model.Pets &&
+                                  Name == model.Name &&
+                                  Id == model.Id;
         }
     }
 }

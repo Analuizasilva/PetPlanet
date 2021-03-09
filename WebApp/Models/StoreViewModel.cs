@@ -32,6 +32,8 @@ namespace WebApp.Models
                 Address = store.Address,
                 TaxNumber = store.TaxNumber,
                 Employees = store.Employees,
+                Name = store.Name,
+                Id = store.Id,
                 Pets = store.Pets
             };
         }
@@ -50,6 +52,8 @@ namespace WebApp.Models
             TaxNumber = model.TaxNumber;
             Pets = model.Pets;
             Employees = model.Employees;
+            Name = model.Name;
+            Id = model.Id;
             return model;
         }
 
@@ -61,7 +65,9 @@ namespace WebApp.Models
                                  Address == model.Address &&
                                  TaxNumber == model.TaxNumber &&
                                  Employees == model.Employees &&
-                                 Pets == model.Pets;
+                                 Pets == model.Pets &&
+                                 Name == model.Name &&
+                                 Id == model.Id;
         }
     }
 }
