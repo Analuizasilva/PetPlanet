@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using DataLayer.Base;
+using Data.Base;
 
-namespace DataAccessLayer.Repositories.Interfaces
+namespace DataAccessLayer.DataAccessObject.Interfaces
 {
-    public interface IRepository<TEntity> 
+    public interface IDataAccessObject<TEntity> 
     {
-        Task Add(TEntity entity);
+        Task Create(TEntity entity);
         Task<TEntity> GetById(Guid id);
-        Task<IEnumerable<TEntity>> GetAll();
-        Task Remove(Guid id);
+        Task<IEnumerable<TEntity>> Read();
+        Task Delete(Guid id);
         Task Update(TEntity entity);
         Task<IEnumerable<TEntity>> Find(Expression<Func<TEntity, bool>> predicate);
         Task<int> SaveChanges();

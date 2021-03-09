@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Threading.Tasks;
-using DataLayer;
+using Data;
 
-namespace DataAccessLayer.Repositories.Interfaces
+namespace DataAccessLayer.DataAccessObject.Interfaces
 {
-    public interface IEmployeeRepository : IRepository<Employee>
+    public interface IEmployeeDataAccessObject : IDataAccessObject<Employee>
     {
         Task<Employee> GetEmployeeByStore(Guid storeId);
         Task<Employee> GetEmployeeWithStore(Guid Id);

@@ -4,24 +4,26 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using DataAccessLayer.Context;
-using DataAccessLayer.Repositories.Interfaces;
-using DataLayer.Base;
+using DataAccessLayer.DataAccessObject.Interfaces;
+using Data;
+using Data.Base;
 using Microsoft.EntityFrameworkCore;
 
-namespace DataAccessLayer.Repositories
+namespace DataAccessLayer.DataAccessObject
 {
-    public abstract class Repository<TEntity> : IRepository<TEntity> where TEntity : Entity
+    public abstract class DataAccessObject<TEntity> : IDataAccessObject<TEntity> where TEntity : Entity
     {
         protected readonly PetPlanetContext context;
+
         protected readonly DbSet<TEntity> db;
 
-        protected Repository(PetPlanetContext context)
+        protected DataAccessObject(PetPlanetContext context)
         {
             this.context = context;
             this.db = context.Set<TEntity>();
         }
 
-        public async Task Add(TEntity entity)
+        public async Task Create(TEntity entity)
         {
             await db.AddAsync(entity);
             await SaveChanges();
@@ -32,7 +34,7 @@ namespace DataAccessLayer.Repositories
             return await db.AsNoTracking().Where(predicate).ToListAsync();
         }
 
-        public async Task<IEnumerable<TEntity>> GetAll()
+        public async Task<IEnumerable<TEntity>> Read()
         {
             return await db.AsNoTracking().ToListAsync();
         }
@@ -42,7 +44,7 @@ namespace DataAccessLayer.Repositories
             return await db.AsNoTracking().Where(e => e.Id == id).FirstOrDefaultAsync();
         }
 
-        public async Task Remove(Guid id)
+        public async Task Delete(Guid id)
         {
             var entity = await GetById(id);
 

@@ -1,16 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Business;
+using Business.Interfaces;
 using DataAccessLayer.Context;
-using DataAccessLayer.Repositories;
-using DataAccessLayer.Repositories.Interfaces;
-using Humanizer.Configuration;
+using DataAccessLayer.DataAccessObject;
+using DataAccessLayer.DataAccessObject.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -46,7 +41,27 @@ namespace WebApp
             services.AddControllersWithViews();
 
             services.AddScoped<PetPlanetContext>();
-            services.AddScoped<IClientRepository, ClientRepository>();
+            services.AddScoped<IClientDataAccessObject, ClientDataAccessObject>();
+            services.AddScoped<IClientBusinessObject, ClientBusinessObject>();
+
+            services.AddScoped<IEmployeeDataAccessObject, EmployeeDataAccessObject>();
+            services.AddScoped<IClientBusinessObject, ClientBusinessObject>();
+
+            services.AddScoped<IPetDataAccessObject, PetDataAccessObject>();
+            services.AddScoped<IPetBusinessObject, PetBusinessObject>();
+
+            services.AddScoped<IProductDataAccessObject, ProductDataAccessObject>();
+            services.AddScoped<IProductBusinessObject, ProductBusinessObject>();
+
+            services.AddScoped<IStoreDataAccessObject, StoreDataAccessObject>();
+            services.AddScoped<IStoreBusinessObject, StoreBusinessObject>();
+
+            services.AddScoped<IServiceDataAccessObject, ServiceDataAccessObject>();
+            services.AddScoped<IServiceBusinessObject, ServiceBusinessObject>();
+
+            services.AddScoped<IProductDataAccessObject, ProductDataAccessObject>();
+            services.AddScoped<IProductBusinessObject, ProductBusinessObject>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

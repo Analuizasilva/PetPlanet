@@ -1,4 +1,4 @@
-﻿using DataLayer;
+﻿using Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataAccessLayer.Context
@@ -14,6 +14,5 @@ namespace DataAccessLayer.Context
         public DbSet<Product> Products { get; set; }
         public DbSet<Service> Services { get; set; }
         public DbSet<Store> Stores { get; set; }
-
     }
 }

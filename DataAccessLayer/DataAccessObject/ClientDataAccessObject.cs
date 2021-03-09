@@ -2,15 +2,15 @@
 using System.Linq;
 using System.Threading.Tasks;
 using DataAccessLayer.Context;
-using DataAccessLayer.Repositories.Interfaces;
-using DataLayer;
+using DataAccessLayer.DataAccessObject.Interfaces;
+using Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace DataAccessLayer.Repositories
+namespace DataAccessLayer.DataAccessObject
 {
-    public class ClientRepository : Repository<Client>, IClientRepository
+    public class ClientDataAccessObject : DataAccessObject<Client>, IClientDataAccessObject
     {
-        public ClientRepository(PetPlanetContext context) : base(context)
+        public ClientDataAccessObject(PetPlanetContext context) : base(context)
         {
         }
 

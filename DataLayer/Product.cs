@@ -1,9 +1,9 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using DataLayer.Base;
+using Data.Base;
 
-namespace DataLayer
+namespace Data
 {
     public class Product : NamedEntity
     {

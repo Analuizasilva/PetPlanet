@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace DataLayer.Base
+namespace Data.Base
 {
     public abstract class Entity
     {

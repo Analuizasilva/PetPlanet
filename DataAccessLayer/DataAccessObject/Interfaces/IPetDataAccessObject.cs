@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Threading.Tasks;
-using DataLayer;
+using Data;
 
-namespace DataAccessLayer.Repositories.Interfaces
+namespace DataAccessLayer.DataAccessObject.Interfaces
 {
-    public interface IPetRepository : IRepository<Pet>
+    public interface IPetDataAccessObject : IDataAccessObject<Pet>
     {
         Task<Pet> GetPetWithClient(Guid id);
         Task<Pet> GetPetByClient(Guid clientId);

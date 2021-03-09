@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using DataLayer.Base;
+using Data.Base;
 
-namespace DataLayer
+namespace Data
 {
     public class Client : NamedEntity
     {

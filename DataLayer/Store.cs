@@ -1,9 +1,9 @@
-﻿using DataLayer.Base;
+﻿using Data.Base;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace DataLayer
+namespace Data
 {
     public class Store : NamedEntity
     {
