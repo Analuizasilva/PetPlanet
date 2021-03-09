@@ -4,9 +4,9 @@ using Data;
 
 namespace DataAccessLayer.DataAccessObject.Interfaces
 {
-    public interface IClientDataAccessObject : IDataAccessObject<Pet>
+    public interface IClientDataAccessObject : IDataAccessObject<Client>
     {
-        Task<Pet> GetClientByPet(Guid petId);
-        Task<Pet> GetClientWithPet(Guid id);
+        Task<Client> GetClientByPet(Guid petId);
+        Task<Client> GetClientWithPet(Guid id);
     }
 }
