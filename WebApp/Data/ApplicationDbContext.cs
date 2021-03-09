@@ -15,5 +15,7 @@ namespace WebApp.Data
         }
         public DbSet<WebApp.Models.ClientViewModel> ClientViewModel { get; set; }
         public DbSet<WebApp.Models.PetViewModel> PetViewModel { get; set; }
+        public DbSet<WebApp.Models.EmployeeViewModel> EmployeeViewModel { get; set; }
+        public DbSet<WebApp.Models.StoreViewModel> StoreViewModel { get; set; }
     }
 }

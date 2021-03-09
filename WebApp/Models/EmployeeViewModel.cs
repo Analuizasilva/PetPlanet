@@ -19,8 +19,9 @@ namespace WebApp.Models
 
         [ForeignKey("Store")]
         public Guid StoreId { get; set; }
+        public Store Store { get; set; }
 
-        public static EmployeeViewModel Parse(Employee employee)
+    public static EmployeeViewModel Parse(Employee employee)
         {
             return new EmployeeViewModel()
             {
@@ -30,9 +31,9 @@ namespace WebApp.Models
                 Identification = employee.Identification,
                 TaxNumber = employee.TaxNumber,
                 StoreId = employee.StoreId,
+                Store = employee.Store,
                 Name = employee.Name,
                 Id = employee.Id
-
             };
         }
 
@@ -49,6 +50,7 @@ namespace WebApp.Models
             Identification = model.Identification;
             TaxNumber = model.TaxNumber;
             StoreId = model.StoreId;
+            Store = model.Store;
             Name = model.Name;
             Id = model.Id;            
             return model;
@@ -63,6 +65,7 @@ namespace WebApp.Models
                                  TaxNumber == model.TaxNumber &&
                                   Name == model.Name &&
                                   Id == model.Id &&
+                                  Store == model.Store &&
                                  StoreId == model.StoreId;
         }
     }
