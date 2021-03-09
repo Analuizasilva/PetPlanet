@@ -14,6 +14,7 @@ namespace WebApp.Models
 
         [ForeignKey("Service")]
         public Guid ServiceId { get; set; }
+        public Service Service { get; set; }
 
         public static ProductViewModel Parse(Product product)
         {
@@ -23,6 +24,7 @@ namespace WebApp.Models
                 DateUpdated = product.DateUpdated,
                 Price = product.Price,
                 ServiceId = product.ServiceId,
+                Service = product.Service,
                 Name = product.Name,
                 Id = product.Id,
             };
@@ -30,7 +32,7 @@ namespace WebApp.Models
 
         public Product ToModel()
         {
-            return new Product(Id, DateCreated, DateUpdated, Name, Price, ServiceId);
+            return new Product(Id, DateCreated, DateUpdated, Name, Price, ServiceId, Service);
         }
 
         public Product ToModel(Product model)
@@ -39,6 +41,7 @@ namespace WebApp.Models
             DateUpdated = model.DateUpdated;
             Price = model.Price;
             ServiceId = model.ServiceId;
+            Service = model.Service;
             Name = model.Name;
             Id = model.Id;
             return model;
@@ -50,6 +53,7 @@ namespace WebApp.Models
                      DateUpdated == model.DateUpdated &&
                                  Price == model.Price &&
                                  ServiceId == model.ServiceId &&
+                                 Service == model.Service &&
                                  Name == model.Name &&
                                  Id == model.Id;
         }

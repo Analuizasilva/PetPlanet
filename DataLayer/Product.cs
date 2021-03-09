@@ -16,10 +16,11 @@ namespace Data
         public Service Service { get; set; }
         #endregion
 
-        public Product(Guid id, DateTime createdAt, DateTime updatedAt, string name, double price, Guid serviceId) : base(id, createdAt, updatedAt, name)
+        public Product(Guid id, DateTime createdAt, DateTime updatedAt, string name, double price, Guid serviceId, Service service) : base(id, createdAt, updatedAt, name)
         {
             Price = price;
             ServiceId = serviceId;
+            Service = service;
         }
 
         public Product()

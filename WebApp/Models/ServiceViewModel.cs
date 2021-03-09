@@ -13,9 +13,12 @@ namespace WebApp.Models
 
         [ForeignKey("Pet")]
         public Guid PetId { get; set; }
+        public Pet Pet { get; set; }
+
 
         [ForeignKey("Employee")]
         public Guid EmployeeId { get; set; }
+        public Employee Employee { get; set; }
 
         public static ServiceViewModel Parse(Service service)
         {
@@ -24,15 +27,17 @@ namespace WebApp.Models
                 DateCreated = service.DateCreated,
                 DateUpdated = service.DateUpdated,
                 PetId = service.PetId,
+                Pet = service.Pet,
                 Products = service.Products,
                 EmployeeId = service.EmployeeId,
+                Employee = service.Employee,
                 Id = service.Id
         };
         }
 
         public Service ToModel()
         {
-            return new Service(Id, DateCreated, DateUpdated, PetId, EmployeeId);
+            return new Service(Id, DateCreated, DateUpdated, PetId, EmployeeId, Employee, Pet);
         }
 
         public Service ToModel(Service model)
@@ -40,8 +45,10 @@ namespace WebApp.Models
             DateCreated = model.DateCreated;
             DateUpdated = model.DateUpdated;
             Products = model.Products;
+            Pet = model.Pet;
             PetId = model.PetId;
-            EmployeeId = model.EmployeeId;            
+            EmployeeId = model.EmployeeId;
+            Employee = model.Employee;
             Id = model.Id;
             return model;
         }
@@ -51,8 +58,10 @@ namespace WebApp.Models
             return DateCreated == model.DateCreated &&
                      DateUpdated == model.DateUpdated &&
                      Products == model.Products &&
-                                 PetId == model.PetId &&                                
+                                 PetId == model.PetId &&
+                                 Pet == model.Pet &&
                                  Id == model.Id &&
+                                 Employee == model.Employee &&
                                  EmployeeId == model.EmployeeId;
         }
     }
