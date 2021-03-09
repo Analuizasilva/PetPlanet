@@ -15,10 +15,11 @@ namespace Data
         public Client Client { get; set; }
         #endregion
 
-        public Pet(Guid id, DateTime dateCreated, DateTime dateUpted, string name, string color, string genre, Guid clientId) : base(id, dateCreated, dateUpted, name)
+        public Pet(Guid id, DateTime dateCreated, DateTime dateUpted, string name, string color, string genre, Client client, Guid clientId) : base(id, dateCreated, dateUpted, name)
         {
             Color = color;
             Genre = genre;
+            Client = client;
             ClientId = clientId;
         }
 

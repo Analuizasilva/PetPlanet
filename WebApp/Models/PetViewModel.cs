@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using Data;
 using WebApp.Models.Base;
 
@@ -11,8 +10,7 @@ namespace WebApp.Models
         public string Color { get; set; }
         public string Genre { get; set; }
         public virtual IEnumerable<Product> Products { get; set; }
-
-        [ForeignKey("Client")]
+        public Client Client { get; set; }
         public Guid ClientId { get; set; }
 
         public static PetViewModel Parse(Pet pet)
@@ -24,15 +22,16 @@ namespace WebApp.Models
                 Color = pet.Color,
                 Genre = pet.Genre,
                 Products = pet.Products,
-                ClientId = pet.ClientId,
+                Client = pet.Client,
                 Name = pet.Name,
+                ClientId = pet.ClientId,
                 Id = pet.Id,
             };
         }
 
         public Pet ToModel()
         {
-            return new Pet(Id, DateCreated, DateUpdated, Name, Color, Genre, ClientId);
+            return new Pet(Id, DateCreated, DateUpdated, Name, Color, Genre, Client, ClientId);
         }
 
         public Pet ToModel(Pet model)
@@ -42,6 +41,7 @@ namespace WebApp.Models
             Color = model.Color;
             Genre = model.Genre;
             Products = model.Products;
+            Client = model.Client;
             ClientId = model.ClientId;
             Name = model.Name;
             Id = model.Id;
@@ -57,6 +57,7 @@ namespace WebApp.Models
                                 Products == model.Products &&
                                 Name == model.Name &&
                                 Id == model.Id &&
+                                Client == model.Client &&
                                 ClientId == model.ClientId;
         }
     }

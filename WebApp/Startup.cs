@@ -45,7 +45,7 @@ namespace WebApp
             services.AddScoped<IClientBusinessObject, ClientBusinessObject>();
 
             services.AddScoped<IEmployeeDataAccessObject, EmployeeDataAccessObject>();
-            services.AddScoped<IClientBusinessObject, ClientBusinessObject>();
+            services.AddScoped<IEmployeeBusinessObject, EmployeeBusinessObject>();
 
             services.AddScoped<IPetDataAccessObject, PetDataAccessObject>();
             services.AddScoped<IPetBusinessObject, PetBusinessObject>();
@@ -57,10 +57,7 @@ namespace WebApp
             services.AddScoped<IStoreBusinessObject, StoreBusinessObject>();
 
             services.AddScoped<IServiceDataAccessObject, ServiceDataAccessObject>();
-            services.AddScoped<IServiceBusinessObject, ServiceBusinessObject>();
-
-            services.AddScoped<IProductDataAccessObject, ProductDataAccessObject>();
-            services.AddScoped<IProductBusinessObject, ProductBusinessObject>();
+            services.AddScoped<IServiceBusinessObject, ServiceBusinessObject>();          
 
         }
 
