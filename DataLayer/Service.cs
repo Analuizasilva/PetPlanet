@@ -19,7 +19,7 @@ namespace Data
         public Employee Employee { get; set; }
         #endregion
 
-        public Service(Guid id, DateTime createdAt, DateTime updatedAt, Guid petId, Guid employeeId) : base(id, createdAt, updatedAt)
+        public Service(Guid id, DateTime dateCreated, DateTime dateUpdated, Guid petId, Guid employeeId) : base(id, dateCreated, dateUpdated)
         {
             PetId = petId;
             EmployeeId = employeeId;

@@ -8,13 +8,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DataAccessLayer.DataAccessObject
 {
-    public class ClientDataAccessObject : DataAccessObject<Client>, IClientDataAccessObject
+    public class ClientDataAccessObject : DataAccessObject<Pet>, IClientDataAccessObject
     {
         public ClientDataAccessObject(PetPlanetContext context) : base(context)
         {
         }
 
-        public async Task<Client> GetClientByPet(Guid petId)
+        public async Task<Pet> GetClientByPet(Guid petId)
         {
             return await db.AsNoTracking()
                          .Include(c => c.Pets)
@@ -22,7 +22,7 @@ namespace DataAccessLayer.DataAccessObject
                          .FirstOrDefaultAsync();
         }
 
-        public async Task<Client> GetClientWithPet(Guid id)
+        public async Task<Pet> GetClientWithPet(Guid id)
         {
             return await db.AsNoTracking()
                           .Include(c => c.Pets)

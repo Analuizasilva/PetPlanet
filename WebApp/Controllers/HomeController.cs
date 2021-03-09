@@ -1,7 +1,4 @@
 ﻿using System.Diagnostics;
-using System.Threading.Tasks;
-using Business.Interfaces;
-using Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using WebApp.Models;
@@ -12,19 +9,19 @@ namespace WebApp.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        private readonly IClientBusinessObject clientBusinessObject;
+        //private readonly IClientBusinessObject clientBusinessObject;
 
-        public HomeController(ILogger<HomeController> logger, IClientBusinessObject clientBusinessObject)
+        public HomeController(ILogger<HomeController> logger/*, IClientBusinessObject clientBusinessObject*/)
         {
             _logger = logger;
-            this.clientBusinessObject = clientBusinessObject;
+            //this.clientBusinessObject = clientBusinessObject;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var client = new Client { Name = "Ana Luiza", PhoneNumber = 1345 };
+            //var client = new Client { Name = "Ana Luiza", PhoneNumber = 1345 };
 
-            var result = await clientBusinessObject.Create(client);
+            //var result = await clientBusinessObject.Create(client);
             return View();
         }
 

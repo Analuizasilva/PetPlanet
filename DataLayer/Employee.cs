@@ -22,7 +22,7 @@ namespace Data
         public Store Store { get; set; }
         #endregion
 
-        public Employee(Guid id, DateTime createdAt, DateTime updatedAt, string name, string position, string identification, int taxNumber, Guid storeId) : base(id, createdAt, updatedAt, name)
+        public Employee(Guid id, DateTime dateCreated, DateTime dateUpdated, string name, string position, string identification, int taxNumber, Guid storeId) : base(id, dateCreated, dateUpdated, name)
         {
             Position = position;
             Identification = identification;

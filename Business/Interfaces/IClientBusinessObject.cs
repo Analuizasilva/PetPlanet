@@ -5,9 +5,9 @@ using Data;
 
 namespace Business.Interfaces
 {
-    public interface IClientBusinessObject : IBusinessObject<Client>
+    public interface IClientBusinessObject : IBusinessObject<Pet>
     {
-        Task<OperationResult<Client>> GetClientByPet(Guid petId);
-        Task<OperationResult<Client>> GetClientWithPet(Guid id);
+        Task<OperationResult<Pet>> GetClientByPet(Guid petId);
+        Task<OperationResult<Pet>> GetClientWithPet(Guid id);
     }
 }
